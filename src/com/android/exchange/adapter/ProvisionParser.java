@@ -325,12 +325,8 @@ public class ProvisionParser extends Parser {
                         }
                     }
                     break;
-                // We accept calendar age, since we never ask for more than two weeks, and that's
-                // the most restrictive policy
+                // We currently reject these next two policies
                 case Tags.PROVISION_MAX_CALENDAR_AGE_FILTER:
-                    policy.mMaxCalendarLookback = getValueInt();
-                    break;
-                // We handle max email lookback
                 case Tags.PROVISION_MAX_EMAIL_AGE_FILTER:
                     policy.mMaxEmailLookback = getValueInt();
                     break;
